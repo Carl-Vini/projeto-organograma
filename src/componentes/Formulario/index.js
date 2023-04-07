@@ -7,15 +7,16 @@ import ListaSuspensa from '../ListaSuspensa';
 import './Formulario.css'
 
 const Formulario = (props) => {
-    const times = [
-        'Programação',
-        'Front-End',
-        'Data Science',
-        'Devops',
-        'UX e Design',
-        'Mobile',
-        'Inovação e Gestão'
-    ]
+    // lista está agora no App.js
+    // const times = [
+    //     'Programação',
+    //     'Front-End',
+    //     'Data Science',
+    //     'Devops',
+    //     'UX e Design',
+    //     'Mobile',
+    //     'Inovação e Gestão'
+    // ]
 
 
     const [nome, setNome] = useState('')
@@ -41,7 +42,7 @@ const Formulario = (props) => {
                 <CampoTexto aoAlterado={valor => setNome(valor)} valor={nome} obrigatorio={true} label='Nome' placeholder='Digite seu nome' />
                 <CampoTexto aoAlterado={valor => setCargo(valor)} valor={cargo} obrigatorio={true} label='Cargo' placeholder='Digite seu cargo' />
                 <CampoTexto aoAlterado={valor => setImagem(valor)} valor={imagem} label='Imagem' placeholder='Digite o endereço da imagem' />
-                <ListaSuspensa aoAlterado={valor => setTime(valor)} valor={time} obrigatorio={true} label='Times' itens={times} />
+                <ListaSuspensa aoAlterado={valor => setTime(valor)} valor={time} obrigatorio={true} label='Times' itens={props.times} />
                 <Botao>
                     Criar card
                 </Botao>
