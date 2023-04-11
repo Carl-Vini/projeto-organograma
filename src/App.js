@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Banner from './componentes/Banner/Banner';
 import Formulario from './componentes/Formulario';
 import Time from './componentes/Time';
+import Colaborador from './componentes/Colaborador';
 
 
 function App() {
@@ -58,7 +59,13 @@ function App() {
     <div className="App">
       <Banner />
       <Formulario times={times.map(time => time.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)} />
-      {times.map(time => <Time nome={time.nome} key={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria}/>)}
+      {times.map(time => <Time 
+      nome={time.nome} 
+      key={time.nome} 
+      corPrimaria={time.corPrimaria} 
+      corSecundaria={time.corSecundaria}
+      colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+      />)}
    
     </div>
   );

@@ -33,6 +33,11 @@ const Formulario = (props) => {
             imagem,
             time
         })
+    // Para limpar o formulário do user
+        setNome('')
+        setCargo('')
+        setImagem('')
+        setTime('')
     }
 
     return (
