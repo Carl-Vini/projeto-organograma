@@ -2,7 +2,7 @@ import './Rodape.css'
 
 const Rodape = (props) => {
     return (
-        <footer className='rodape'>
+        <footer className='footer'>
             <div className='redes'>
                 <a href='https://www.linkedin.com/in/carlos-vinícius-bezerra-sampaio-b6a302254/' target='_blank'>
                     <img src="/images/fb.png" alt='ícone do facebook' />
