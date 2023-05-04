@@ -3,7 +3,6 @@ import { useState } from 'react';
 import Banner from './componentes/Banner/Banner';
 import Formulario from './componentes/Formulario';
 import Time from './componentes/Time';
-import Colaborador from './componentes/Colaborador';
 import Rodape from './componentes/Rodape';
 
 
@@ -56,6 +55,11 @@ function App() {
     setColaboradores([...colaboradores, colaborador])
   }
 
+  function deletarColaborador() {
+      console.log('deletando colaborador')
+  }
+
+
   return (
     <div className="App">
       <Banner />
@@ -66,6 +70,7 @@ function App() {
         corPrimaria={time.corPrimaria}
         corSecundaria={time.corSecundaria}
         colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+        aoDeletar={deletarColaborador}
       />)}
       <Rodape />
     </div>
